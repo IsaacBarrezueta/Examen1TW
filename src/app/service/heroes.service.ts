@@ -43,12 +43,44 @@ export class HeroesService {
       cliente: "Nano",
       tipo: "facebook",
       descripcion:"Relajado y tranquilo"
+    },
+    {
+      codRegistro: "006",
+      fecha: "2023-07-31",
+      cliente: "Manolo Caja",
+      tipo: "facebook",
+      descripcion:"Relajado y tranquilo"
+    },
+    {
+      codRegistro: "007",
+      fecha: "2023-07-31",
+      cliente: "Chica Demicuadra",
+      tipo: "facebook",
+      descripcion:"Relajado y tranquilo"
+    },
+    {
+      codRegistro: "008",
+      fecha: "2023-07-31",
+      cliente: "Lorena Manta",
+      tipo: "facebook",
+      descripcion:"Relajado y tranquilo"
+    },
+    {
+      codRegistro: "009",
+      fecha: "2023-07-31",
+      cliente: "Paco Papa",
+      tipo: "facebook",
+      descripcion:"Relajado y tranquilo"
+    },
+    {
+      codRegistro: "010",
+      fecha: "2023-07-31",
+      cliente: "Carlos Isaac",
+      tipo: "facebook",
+      descripcion:"Relajado y tranquilo"
     }
   ];
    filtro:string='';
-
-
-
 
 
   getClientes()
