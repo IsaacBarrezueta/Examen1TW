@@ -1,0 +1,21 @@
+<h1>{{cliente.cliente}} <small>{{cliente.fecha}}</small></h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img src="" alt="">
+        <br><br>
+        <a [routerLink]="['/clientes']" class="btn btn-outline-danger btn-black">Regresar
+
+        </a>
+    </div>
+    <div class="col-md-8">
+        <h3>Nombre del cliente: {{cliente.cliente}}</h3>
+        <hr>
+        <h3>Tipo de interaccion: {{cliente.tipo}}</h3>
+        <hr>
+        <p>
+            {{cliente.descripcion}}
+        </p>
+    </div>
+
+</div>

@@ -1,0 +1,53 @@
+<form>
+  <h2>Ingresar un nuevo cliente</h2>
+  <div>
+    <label for="cod">CodigoRegistro:</label>
+    <input id="cod" type="text" [(ngModel)]="codRegistro" name="cod" />
+  </div>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" type="text" [(ngModel)]="cliente" name="nombre" />
+  </div>
+  <div>
+    <label for="anio">Año:</label>
+    <input id="anio" type="date" [(ngModel)]="fecha" name="anio" />
+  </div>
+  <div>
+    <label for="bio">Descripcion:</label>
+    <textarea
+      cols="50"
+      rows="10"
+      id="bio"
+      placeholder="Escriba la biografia"
+      name="bio"
+      [(ngModel)]="descripcion"
+    ></textarea>
+  </div>
+  <div>
+    <label for="tipo">Tipo de interaccion:</label>
+    <select [(ngModel)]="tipo" name="tipo">
+      <option value="" name="tipo"></option>
+      <option value="facebook" name="tipo">Facebook</option>
+      <option value="twitter" name="tipo">Twitter</option>
+    </select>
+  </div>
+  <button
+    (click)="insertarClientes()"
+  >
+    Guardar
+  </button>
+
+  <hr>
+  
+  <button *ngIf="clienteEditarIndex === null" (click)="insertarClientes()">Guardar</button>
+  <button *ngIf="clienteEditarIndex !== null" (click)="guardarCambios()">Guardar cambios</button>
+</form>
+
+<h2>Lista de Clientes</h2>
+<ul>
+  <li *ngFor="let cliente of clientes; let i = index">
+    {{ cliente.cliente }} ({{ cliente.tipo }}) - {{ cliente.fecha }}
+    <button (click)="editarCliente(cliente, i)">Editar</button>
+    <button (click)="eliminarCliente(i)">Eliminar</button>
+  </li>
+</ul>

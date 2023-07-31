@@ -1,0 +1,20 @@
+<h1>Lista <small> Clientes </small></h1>
+<hr>
+<div class="col animated fadeIn fast" *ngFor="let cliente of clientes| filter:_clientesService.filtro">
+
+
+    <div class="card mb-3 " style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{cliente.codRegistro}}</h5>
+                    <p class="card-text">{{cliente.cliente}}</p>
+                    <p class="card-text"><small class="text-body-secondary">{{cliente.tipo}}</small></p>
+                    <p class="card-text"><small class="text-body-secondary">{{cliente.descripcion}}</small></p>
+                    <p class="card-text"><small class="text-body-secondary">{{cliente.fecha}}</small></p>
+                    <button (click)="verCliente(cliente)" type="button" class="text-body-secondary">Ver Mas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
